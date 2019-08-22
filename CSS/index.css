@@ -42,7 +42,7 @@ ul {
 #vertical {
     height: 600px; 
     width: 100%;
-    background: url('/home/zadmin/Documents/MyHomePage/Images/keyboard.jpg') no-repeat center center;
+    background: url('/Images/keyboard.jpg') no-repeat center center;
     background-size: cover;
     /* padding: 14px,16px; */
     
@@ -139,7 +139,7 @@ html{
   color: orange;
   height: 600px; 
   width: 100%;
-  background: url('/home/zadmin/Documents/MyHomePage/Images/keyboard.jpg') no-repeat center center;
+  background: url('/Images/keyboard.jpg') no-repeat center center;
    background-color:ghostwhite;
   background-size: cover;
   padding: 14px,16px;
