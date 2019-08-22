@@ -1,0 +1,154 @@
+.body{
+  background-color: gainsboro;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+  }
+  .nav{
+      float: left;
+  }
+  .logo{
+    width: 40px;
+    height:30px;
+  }
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color:gray;
+  }
+
+  #container {
+    height:100%;
+    margin-top: 0%;
+    /* padding-top: 0px;
+    padding: 14px,16px; */
+}
+
+#vertical {
+    height: 600px; 
+    width: 100%;
+    background: url('/home/zadmin/Documents/MyHomePage/Images/keyboard.jpg') no-repeat center center;
+    background-size: cover;
+    /* padding: 14px,16px; */
+    
+}
+HTML  CSS Result
+EDIT ON
+ /* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%; 
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 15em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255, 255, 255, 0.75);}
+  to{border-right-color: transparent;}
+}
+.wrap-hero-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero-content {
+  position: absolute;
+  text-align: center;
+  min-width: 300px;
+  left: 50%;
+  top: 50%;
+  padding: 65px;
+  background: rgba(255, 255, 255, 0.8);
+  outline: 4px double #FFFFFF;
+  outline-offset: 8px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Clear floats after image containers */
+
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery{
+  background-color: gainsboro;
+  text-align: center;
+  padding-bottom: 0px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: (8,5vw);
+  padding-top: 0px; 
+  padding-bottom: 20px;
+  background-color: gainsboros;
+}
+.grid-container > div {
+  background-color: gainsboro;
+  text-align: start;
+  padding: 20px 15px;
+  font-size: 30px;
+}
+.contact{
+  /* text-align: center; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: orange;
+  height: 600px; 
+  width: 100%;
+  background: url('/home/zadmin/Documents/MyHomePage/Images/keyboard.jpg') no-repeat center center;
+   background-color:ghostwhite;
+  background-size: cover;
+  padding: 14px,16px;
+  
+}
+.about{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: xx-large;
+  color: black;
+  background-color: gainsboro;
+  padding:14px,16px;
+}
