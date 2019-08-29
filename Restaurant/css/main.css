@@ -1,0 +1,54 @@
+.body {
+    font-family: Arial;
+    color: black;
+  }
+  
+.split {
+    height: 100%;
+    /* background-color: brown; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    background-color:gainsboro;
+  }
+  
+.left {
+  width: 25%;
+  border-style: outset;
+    left: 0;
+  }
+  
+.right {
+    right: 0;
+    width:75%;
+  }
+  
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    background-color: white;
+    padding: 5px;
+    
+  }
+  .grid-container > div {
+    background-color:white;
+    text-align: left;
+    box-shadow: 0px 1px 2px 0px;
+    /* border-style: outset; */
+    padding: 10px 10px;
+    font-size: 20px;
+  
+  }
