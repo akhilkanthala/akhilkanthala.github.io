@@ -70,6 +70,43 @@ function dragStart(ev) {
     ev.stopPropagation();
     return false;
  }
+ var el = document.getElementById('menu'); 
+
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchleave", handleEnd, false);
+  el.addEventListener("touchmove", handleMove, false);
+
+  function handleStart(ev) {
+      // Handle the start of the touch
+      ev.dataTransfer.effectAllowed='move';
+      //  ev.currentTarget.style.border = "dashed";
+        ev.dataTransfer.setData("Text", ev.target.id);
+        ev.dataTransfer.setDragImage(ev.target,0,0);
+        return true;
+  }
+function handleEnd(ev,i) {
+   var src = ev.dataTransfer.getData("Text");
+   item=JSON.parse(localStorage.getItem("food"));
+   addItem(item[src],i);
+   console.log(i);
+   for(k=1;k<4;k++){
+       if(localStorage.getItem('table-'+k+'')==null){
+               var htm1="";
+                  htm1+='<span>Rs.0.00 | Totalitems:0</span>';
+                  document.getElementById('table-'+k+'').innerHTML=htm1;
+               }
+       else{
+           var data=JSON.parse(localStorage.getItem(""+k+"-data"));
+           var htm1="";
+                  htm1+='<span>Rs.'+data[0].bill+' | Totalitems:'+data[0].count+'</span>';
+                  document.getElementById("table-"+k+"").innerHTML=htm1;
+       }
+       }
+   ev.stopPropagation();
+   return false;
+}
  function addItem(item,i){
      if(localStorage.getItem('table-'+i+'')==null){
         var oldItems=[];
