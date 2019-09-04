@@ -131,7 +131,7 @@ function handleEnd(ev,i) {
  }
  function fun(i){
      var items=JSON.parse(localStorage.getItem("table-"+i+""));
-     document.getElementById('target'+i+'').style.backgroundColor="yellow";
+ //    document.getElementById('target'+i+'').style.backgroundColor="yellow";
    // console.log(items);
      if(items!=null){
          var total=0;   
