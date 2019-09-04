@@ -4,21 +4,25 @@
         <title>Billing</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="split left">
             <h2 style="text-align: center">Tables</h2>
+            <div >
+            <input class="tableSearch" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search table.." title="Type in a name">
+            </div>
+            <br><br>
             <div id="tables">
                 <div class="grid-container">
-                    <div onclick="return fun(1)" id="target1" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,1)" ondragover="return dragOver(event)">Table-1<br>
+                    <div class="target1" data-toggle="modal" data-target="#myModal" onclick="return fun(1)" id="target1" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,1)" ondragover="return dragOver(event)">Table-1<br>
                 <span id="table-1"></span>
                 </div>
-                    <div onclick="return fun(2)" id="target2" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,2)" ondragover="return dragOver(event)">Table-2<br>
+                    <div data-toggle="modal" data-target="#myModal" onclick="return fun(2)" id="target2" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,2)" ondragover="return dragOver(event)">Table-2<br>
                         <span id="table-2"></span>
                     </div>
-                    <div onclick="return fun(3)" id="target3" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,3)" ondragover="return dragOver(event)">Table-3<br>
+                    <div data-toggle="modal" data-target="#myModal" onclick="return fun(3)" id="target3" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,3)" ondragover="return dragOver(event)">Table-3<br>
                         <span id="table-3"></span>
                     </div>
                 </div> 
@@ -26,9 +30,32 @@
         </div>
         <div class="split right"> 
             <h2 style="text-align: center">Menu</h2>
+            <div >
+                <input class="menuSearch" type="text" id="searchMenu" onkeyup="myFunc()" placeholder="Search menu.." title="Type in a name">
+                </div>
+                <br><br>
             <div class="grid-container" id="menu">
             </div>    
         </div>
-        <script type="text/javascript" src="script/main.js"></script>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: violet">
+                  <button type="button" class="close" onclick="col()" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title" id="modal-title"></h4>
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" onclick="generateBill()" data-dismiss="modal">CLOSE SESSION(GENERATE BILL)</button>
+                </div>
+              </div>
+              
+            </div>
+            </div>
+        
+        <script type="text/javascript" src="/script/main.js"></script>
     </body>
 </html>
