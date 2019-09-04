@@ -132,7 +132,7 @@ function handleEnd(ev,i) {
  function fun(i){
      var items=JSON.parse(localStorage.getItem("table-"+i+""));
      document.getElementById('target'+i+'').style.backgroundColor="yellow";
-    console.log(items);
+   // console.log(items);
      if(items!=null){
          var total=0;   
     htm='Table-'+i+'|Order Details';
@@ -184,7 +184,7 @@ function deleteItem(i,j){
 function generateBill(){
     var at=document.getElementById("modal-title").innerHTML;
     localStorage.removeItem('table-'+at[6]+'');
-    localStorage.setItem("1-data",JSON.stringify([{count: 0, bill: 0}]));
+    localStorage.setItem(""+at[6]+"-data",JSON.stringify([{count: 0, bill: 0}]));
     fun(parseInt(at[6]));
     showTables();
     document.getElementById('target'+at[6]+'').style.backgroundColor="white";
@@ -218,4 +218,7 @@ function myFunction() {
           tr.style.display = "none";
         }          
     }
+  }
+  function col(){
+
   }
