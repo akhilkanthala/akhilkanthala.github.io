@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery Admin</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="CSS/index.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+       
+            <ul>   
+                <div class="nav">
+                    <li><a href="index.html"><img src="Images/logo.png" alt="AKHIL"  class="logo"></a></li>
+                </div>
+                <li><a href="index.html#About">About</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+                <li><a href="index.html#Galle">Gallery</a></li>
+                <li><a href="index.html#home">Home</a></li>  
+            </ul>
+        </nav>
+        <br><br><br><br>
+        <form class="form-horizontal" name="formadmin">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="url">url:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="url" placeholder="Enter url" name="url">
+                    <div id="url1"></div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Name:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="nameadmin" placeholder="Enter name" name="nameadmin">
+                <div id="nameadmin1"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="info">Information:</label>
+              <div class="col-sm-10">          
+                <input type="text" class="form-control" id="info" placeholder="Enter information" name="info">
+                <div id="info1"></div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="date">Uploaded Date:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">
+                    <div id="date1"></div>
+                </div>
+            </div>
+            <div class="form-group">        
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" value="add" class="btn btn-primary" onclick="add()">Add<br></button>
+              </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" value="edit" class="btn btn-primary" onclick="edit()">Edit<br></button>
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" value="remove" class="btn btn-primary" onclick="remove()">Remove<br></button>
+                </div>
+            </div>
+          </form>
+          
+          <div id="alert" style="text-align: center; font-size: large;color:black">
+          </div>      
+          <div class="gallery" id="Galle"> 
+            <h1 class="gallery">Gallery</h1>
+    <div class="grid-container"  id="loa">
+        </div>
+        </div>
+        <script type="text/javascript" src="javascript/admin.js"></script>
+    </body>
+</html>
