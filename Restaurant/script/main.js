@@ -4,9 +4,6 @@ $(document).ready(function(){
       for(i=1;i<n+1;i++){
         localStorage.setItem(""+i+"-data",JSON.stringify([{count: 0, bill: 0}]));
       }
-    // localStorage.setItem("1-data",JSON.stringify([{count: 0, bill: 0}]));
-    // localStorage.setItem("2-data",JSON.stringify([{count: 0, bill: 0}]));
-    // localStorage.setItem("3-data",JSON.stringify([{count: 0, bill: 0}]));
     $.getJSON('main.json', function(data) {
         localStorage.setItem('food',JSON.stringify(data));
         var htm="";
@@ -136,7 +133,7 @@ function handleEnd(ev,i) {
      var items=JSON.parse(localStorage.getItem("table-"+i+""));
  //    document.getElementById('target'+i+'').style.backgroundColor="yellow";
      if(items!=null){
-         var total=0;   
+         var total=0;     
     htm='Table-'+i+'|Order Details';
     document.getElementById("modal-title").innerHTML=htm;
     htm1='<table style="width:100%"><tr><th style="text-align: left;width:50px">S.No</th><th style="text-align: center;width:150px">Item</th> <th style="text-align: left">Price</th><th style="text-align: left"></th><th style="text-align: left"></th></tr>';
