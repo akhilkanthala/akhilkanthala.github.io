@@ -1,9 +1,12 @@
+var n=3;
 $(document).ready(function(){
-    
     if(localStorage.getItem('food')==null){
-    localStorage.setItem("1-data",JSON.stringify([{count: 0, bill: 0}]));
-    localStorage.setItem("2-data",JSON.stringify([{count: 0, bill: 0}]));
-    localStorage.setItem("3-data",JSON.stringify([{count: 0, bill: 0}]));
+      for(i=1;i<n+1;i++){
+        localStorage.setItem(""+i+"-data",JSON.stringify([{count: 0, bill: 0}]));
+      }
+    // localStorage.setItem("1-data",JSON.stringify([{count: 0, bill: 0}]));
+    // localStorage.setItem("2-data",JSON.stringify([{count: 0, bill: 0}]));
+    // localStorage.setItem("3-data",JSON.stringify([{count: 0, bill: 0}]));
     $.getJSON('main.json', function(data) {
         localStorage.setItem('food',JSON.stringify(data));
         var htm="";
@@ -24,7 +27,7 @@ else{
 }
 });
 function showTables(){
-    for(i=1;i<4;i++){
+    for(i=1;i<n+1;i++){
         if(localStorage.getItem('table-'+i+'')==null){
                 var htm1="";
                    htm1+='<span>Rs.0.00 | Totalitems:0</span>';
@@ -132,7 +135,6 @@ function handleEnd(ev,i) {
  function fun(i){
      var items=JSON.parse(localStorage.getItem("table-"+i+""));
  //    document.getElementById('target'+i+'').style.backgroundColor="yellow";
-   // console.log(items);
      if(items!=null){
          var total=0;   
     htm='Table-'+i+'|Order Details';
