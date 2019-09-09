@@ -111,6 +111,12 @@ function validate(){
         document.getElementById("url1").innerHTML="<p>Please enter the url of image</p>";
         flag=flag+1;
     }
+    var re = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+    var reg=/\/Images[.]*/;
+    if (!re.test(url) && !(reg.test(url))) { 
+    flag=flag+1;
+    document.getElementById("url1").innerHTML="<p>Please enter valid url of image</p>";
+    }
     var now=new Date();
     var target=new Date(date);
     if(target>now){
