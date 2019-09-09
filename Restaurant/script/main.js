@@ -131,7 +131,8 @@ function handleEnd(ev,i) {
  }
  function fun(i){
      var items=JSON.parse(localStorage.getItem("table-"+i+""));
- //    document.getElementById('target'+i+'').style.backgroundColor="yellow";
+     document.getElementById('clos').innerHTML=`<button type="button" class="close" onclick="col(`+i+`)" data-dismiss="modal">&times;</button><h4 class="modal-title" id="modal-title"></h4>`;
+     document.getElementById('target'+i+'').style.backgroundColor="yellow";
      if(items!=null){
          var total=0;     
     htm='Table-'+i+'|Order Details';
@@ -218,6 +219,6 @@ function myFunction() {
         }          
     }
   }
-  function col(){
-
+  function col(i){
+    document.getElementById('target'+i+'').style.backgroundColor="white";
   }
